@@ -1,0 +1,19 @@
+#define motor1 7
+#define motor2 8
+#define speed1 5
+#define speed2 6
+
+
+void setup()
+{
+for (int i = 3; i<9; i++;) (pinMode(i, OUTPUT);
+digitalWrite(3, 1);
+}
+
+
+void forward()
+{
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 255);
+analogWrite(speed2, 255);
