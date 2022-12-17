@@ -1,19 +1,95 @@
-#define motor1 7
-#define motor2 8
-#define speed1 5
-#define speed2 6
+#define motor1  7
+#define motor2  8
+#define speed1  5
+#define speed2  6 
 
 
-void setup()
+void setup() 
 {
-for (int i = 3; i<9; i++;) (pinMode(i, OUTPUT);
-digitalWrite(3, 1);
+  
+for ( int i = 3;i<9;  i++)(pinMode(i, OUTPUT));
+digitalWrite(3,1);
 }
 
-
-void forward()
+void Forward()
 {
+ digitalWrite(3,1);
 digitalWrite(motor1, 1);
 digitalWrite(motor2, 1);
 analogWrite(speed1, 255);
-analogWrite(speed2, 255);
+analogWrite(speed2, 255); 
+}
+
+void Backward()
+{
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 255);
+analogWrite(speed2, 255); 
+}
+
+
+/*
+void Left()
+
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 255);
+analogWrite(speed2, 255); 
+
+
+void Right()
+
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 255);
+analogWrite(speed2, 255); 
+
+
+void LeftForward()
+
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 255);
+analogWrite(speed2, 128); 
+
+
+void RightForward()
+
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 128);
+analogWrite(speed2, 255); 
+
+
+void LeftBackward()
+
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 255);
+analogWrite(speed2, 128); 
+
+
+void RightBackward()
+
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 128);
+analogWrite(speed2, 255); 
+
+
+void Stop()
+
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 0);
+analogWrite(speed2, 0); 
+*/
+void loop() 
+{
+Forward();
+delay(5000);
+Backward();
+delay(5000);
+
+}
