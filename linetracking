@@ -1,0 +1,68 @@
+#define motor1 7
+#define motor2 8
+#define speed1 5
+#define speed2 6
+#define left_sensor analogRead(A2)
+#define middle_sensor analogRead(A1)
+#define right_sensor analogRead(A0)
+
+void setup() {
+  // put your setup code here, to run once:
+//for (int i = 3; i<9; i++)( pinMode(i, OUTPUT));
+digitalWrite(3, 1);
+pinMode(left_sensor, INPUT);
+pinMode(middle_sensor, INPUT);
+pinMode(right_sensor, INPUT);
+}
+
+void forward()
+{
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 100);
+analogWrite(speed2, 100);
+}
+
+void backward()
+{
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 100);
+analogWrite(speed2, 100);
+}
+
+void left()
+{
+digitalWrite(motor1, 1);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 100);
+analogWrite(speed2, 100);
+}
+
+void right()
+{
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 1);
+analogWrite(speed1, 100);
+analogWrite(speed2, 100);
+}
+void Stop()
+{
+digitalWrite(motor1, 0);
+digitalWrite(motor2, 0);
+analogWrite(speed1, 0);
+analogWrite(speed2, 0);
+}
+
+
+
+void loop() 
+{
+ if (middle_sensor>300)
+void forward();
+else if (left_sensor>300)
+void left();
+else if (right_sensor>170)
+void right();
+
+}
